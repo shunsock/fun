@@ -1,0 +1,23 @@
+version: '3'
+
+tasks:
+  up:
+    dir: Fun
+    cmds:
+      - nix develop
+  build:
+    dir: Fun
+    cmds:
+      - dotnet build
+  run:
+    dir: Fun
+    cmds:
+      - dotnet run
+  lint:
+    dir: Fun
+    cmds:
+      - dotnet fsharplint lint Fun.fsproj
+  format:
+    dir: Fun
+    cmds:
+      - dotnet fantomas .
