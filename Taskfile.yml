@@ -21,3 +21,7 @@ tasks:
     dir: Fun
     cmds:
       - dotnet fantomas .
+  test:
+    dir: Fun
+    cmds:
+      - dotnet test Fun.Tests/Fun.Tests.fsproj
