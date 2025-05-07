@@ -12,10 +12,10 @@
         pkgs = import nixpkgs { inherit system; };
       in {
         devShells.default = pkgs.mkShell {
-          packages = with pkgs; [ dotnet-sdk_9 go-task ];
+          packages = [ pkgs.dotnet-sdk_10 pkgs.go-task ];
 
           shellHook = ''
-            export DOTNET_ROOT=${pkgs.dotnet-sdk_9}
+            export DOTNET_ROOT=${pkgs.dotnet-sdk_10.sdk}
             if [ ! -f .config/dotnet-tools.json ]; then
               dotnet new tool-manifest
               dotnet tool install fantomas
