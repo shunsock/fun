@@ -2,7 +2,7 @@
   description = "DevShell for F#";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/52d0eded529af34e91df6b2a2bc32eb636637cd2";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -12,10 +12,10 @@
         pkgs = import nixpkgs { inherit system; };
       in {
         devShells.default = pkgs.mkShell {
-          packages = [ pkgs.dotnet-sdk_10 pkgs.go-task ];
+          packages = [ pkgs.dotnet-sdk_9 pkgs.go-task ];
 
           shellHook = ''
-            export DOTNET_ROOT=${pkgs.dotnet-sdk_10.sdk}
+            export DOTNET_ROOT=$(dirname $(readlink -f $(which dotnet)))
             if [ ! -f .config/dotnet-tools.json ]; then
               dotnet new tool-manifest
               dotnet tool install fantomas
