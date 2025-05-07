@@ -1,19 +1,16 @@
 version: '3'
 
-vars:
-  GREETING: Hello, World!
-
 tasks:
   up:
     dir: Fun
     cmds:
       - nix develop
+  build:
+    cmds:
+      - dotnet build
   run:
-    dir: Fun
     cmds:
       - dotnet run
-    silent: true
   lint:
-    dir: Fun
     cmds:
       - dotnet fsharplint lint Fun.fsproj

@@ -12,7 +12,7 @@
         pkgs = import nixpkgs { inherit system; };
       in {
         devShells.default = pkgs.mkShell {
-          packages = [ pkgs.dotnet-sdk_9 pkgs.go-task ];
+          packages = [ pkgs.dotnet-sdk_8 pkgs.go-task ];
 
           shellHook = ''
             export DOTNET_ROOT=$(dirname $(readlink -f $(which dotnet)))
