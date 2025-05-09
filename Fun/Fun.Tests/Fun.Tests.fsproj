@@ -1,17 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-
-    <IsPackable>false</IsPackable>
+  <TargetFramework>net8.0</TargetFramework>
+  <IsPackable>false</IsPackable>
     <GenerateProgramFile>false</GenerateProgramFile>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
-
   <ItemGroup>
-    <Compile Include="UnitTest1.fs" />
+    <Compile Include="TestAdd.fs" />
+    <Compile Include="TestSub.fs" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,9 +19,8 @@
     <PackageReference Include="NUnit.Analyzers" Version="3.9.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
   </ItemGroup>
-
   <ItemGroup>
-  <ProjectReference Include="../Fun.fsproj" />
+    <ProjectReference Include="../Fun.fsproj" />
   </ItemGroup>
-
 </Project>
+

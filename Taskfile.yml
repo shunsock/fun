@@ -8,7 +8,7 @@ tasks:
   build:
     dir: Fun
     cmds:
-      - dotnet build
+      - dotnet build Fun.fsproj
   run:
     dir: Fun
     cmds:
@@ -24,4 +24,4 @@ tasks:
   test:
     dir: Fun
     cmds:
-      - dotnet test Fun.Tests/Fun.Tests.fsproj
+      - dotnet test FunSolution.sln
