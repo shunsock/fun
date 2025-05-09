@@ -4,7 +4,7 @@ open NUnit.Framework
 open Fun
 
 [<TestFixture>]
-type TestClass() =
+type TestAddClass() =
 
     [<Test>]
     member this.``1 + 1 = 2``() =
