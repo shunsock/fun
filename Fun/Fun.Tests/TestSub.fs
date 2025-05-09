@@ -4,9 +4,9 @@ open NUnit.Framework
 open Fun
 
 [<TestFixture>]
-type TestClass() =
+type TestSubClass() =
 
     [<Test>]
     member this.``1 - 1 = 0``() =
-        let result = sub 1 1
-        Assert.That (result, Is.EqualTo (0))
+        let result: Number = sub (Integer (1)) (Float (1.0))
+        Assert.That (result, Is.EqualTo (Float (0.0)))
