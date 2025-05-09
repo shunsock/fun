@@ -8,5 +8,5 @@ type TestAddClass() =
 
     [<Test>]
     member this.``1 + 1 = 2``() =
-        let result = add 1 1
-        Assert.That (result, Is.EqualTo (2))
+        let result = add (Integer (1)) (Integer (1))
+        Assert.That (result, Is.EqualTo (Integer (2)))
