@@ -31,3 +31,10 @@ let sub (x: Number) (y: Number) : Number =
     | (Float x, Integer y) -> fromFloat (x - float y)
     | (Integer x, Float y) -> fromFloat (float x - y)
     | (Float x, Float y) -> fromFloat (x - y)
+
+let mul (x: Number) (y: Number) : Number =
+    match (x, y) with
+    | (Integer x, Integer y) -> fromInteger (x * y)
+    | (Float x, Integer y) -> fromFloat (x * float y)
+    | (Integer x, Float y) -> fromFloat (float x * y)
+    | (Float x, Float y) -> fromFloat (x * y)
