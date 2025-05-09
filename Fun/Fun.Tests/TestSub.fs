@@ -10,4 +10,3 @@ type TestClass() =
     member this.``1 - 1 = 0``() =
         let result = sub 1 1
         Assert.That (result, Is.EqualTo (0))
-

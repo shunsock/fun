@@ -10,4 +10,3 @@ type TestAddClass() =
     member this.``1 + 1 = 2``() =
         let result = add 1 1
         Assert.That (result, Is.EqualTo (2))
-
