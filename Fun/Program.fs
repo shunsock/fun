@@ -1,3 +1,4 @@
 ﻿module Fun
 
-let add x y = x + y
+
+let add (x: int) (y: int) : int = x + y
