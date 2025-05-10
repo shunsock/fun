@@ -9,6 +9,7 @@
     <Compile Include="TestAdd.fs" />
     <Compile Include="TestMul.fs" />
     <Compile Include="TestSub.fs" />
+    <Compile Include="TestDiv.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.4">
